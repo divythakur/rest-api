@@ -1,6 +1,6 @@
 package com.example.assignment.db.northwindassignment.Controller;
 
-import com.example.assignment.db.northwindassignment.Model.customer;
+import com.example.assignment.db.northwindassignment.Model.Customers;
 import com.example.assignment.db.northwindassignment.repository.Custrepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,18 +15,18 @@ public class Custcontroller {
     private Custrepo dao;
 
     @PostMapping("/addCustomers")
-    public String addCustomers(@RequestBody List<customer> Customers) {
+    public String addCustomers(@RequestBody List<Customers> Customers) {
         dao.saveAll( Customers);
         return "hi";
     }
 
     @GetMapping("/getAll")
-    public List<customer> getCustomers() {
-        return (List<customer>) dao.findAll();
+    public List<Customers> getCustomers() {
+        return (List<Customers>) dao.findAll();
     }
 
     @GetMapping("/getCustomer/{id}")
-    public Optional<customer> getone(@PathVariable String id)
+    public Optional<Customers> getone(@PathVariable String id)
     {
         return dao.findById(id);
     }

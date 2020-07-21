@@ -1,7 +1,6 @@
 package com.example.assignment.db.northwindassignment.Controller;
 
 import com.example.assignment.db.northwindassignment.Model.Orders;
-import com.example.assignment.db.northwindassignment.Model.customer;
 import com.example.assignment.db.northwindassignment.repository.OrderRepository;
 import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;

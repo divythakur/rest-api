@@ -6,9 +6,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-public class customer {
+@Table(name="Customers")
+public class Customers {
     @Id
-    private String Customer_Id;
+    @Column(name="CustomerId")
+    private String customer_id;
     private String Company_Name;
     private String Contact_Name;
     private String Contact_Title;
@@ -22,38 +24,37 @@ public class customer {
     private String Phone;
     @Column(name="Fax")
     private String Fax;
-//    public customer(){};
 
-    public String getCustomerId() {
-        return Customer_Id;
+    public String getCustomer_id() {
+        return customer_id;
     }
 
-    public void setCustomerId(String customerId) {
-        Customer_Id = customerId;
+    public void setCustomer_id(String customer_id) {
+        this.customer_id = customer_id;
     }
 
-    public String getCompanyName() {
+    public String getCompany_Name() {
         return Company_Name;
     }
 
-    public void setCompanyName(String companyName) {
-        Company_Name = companyName;
+    public void setCompany_Name(String company_Name) {
+        Company_Name = company_Name;
     }
 
-    public String getContactName() {
+    public String getContact_Name() {
         return Contact_Name;
     }
 
-    public void setContactName(String contactName) {
-        Contact_Name = contactName;
+    public void setContact_Name(String contact_Name) {
+        Contact_Name = contact_Name;
     }
 
-    public String getContactTitle() {
+    public String getContact_Title() {
         return Contact_Title;
     }
 
-    public void setContactTitle(String contactTitle) {
-        Contact_Title = contactTitle;
+    public void setContact_Title(String contact_Title) {
+        Contact_Title = contact_Title;
     }
 
     public String getAddress() {
@@ -80,12 +81,12 @@ public class customer {
         Region = region;
     }
 
-    public String getPostalCode() {
+    public String getPostal_Code() {
         return Postal_Code;
     }
 
-    public void setPostalCode(String postalCode) {
-        Postal_Code = postalCode;
+    public void setPostal_Code(String postal_Code) {
+        Postal_Code = postal_Code;
     }
 
     public String getCountry() {
