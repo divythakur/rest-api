@@ -16,15 +16,12 @@ public class Orders {
     @Column(name="ShipVia")
     private Integer  Ship_via;
     private Float Freight ;
-    private Integer Ship_Name;
-    private Integer Ship_Address;
-    private Integer Ship_City;
-    private Integer Ship_Region;
-    private Integer Ship_Postal_Code;
-    private Integer Ship_Country;
-    @ManyToOne
-    @JoinColumn(name = "Customer_Id", insertable = false, updatable = false)
-    private customer Customer;
+    private String Ship_Name;
+    private String Ship_Address;
+    private String Ship_City;
+    private String Ship_Region;
+    private String Ship_Postal_Code;
+    private String Ship_Country;
 
     public Integer getOrder_ID() {
         return Order_ID;
@@ -90,60 +87,52 @@ public class Orders {
         Freight = freight;
     }
 
-    public Integer getShip_Name() {
+    public String getShip_Name() {
         return Ship_Name;
     }
 
-    public void setShip_Name(Integer ship_Name) {
+    public void setShip_Name(String ship_Name) {
         Ship_Name = ship_Name;
     }
 
-    public Integer getShip_Address() {
+    public String getShip_Address() {
         return Ship_Address;
     }
 
-    public void setShip_Address(Integer ship_Address) {
+    public void setShip_Address(String ship_Address) {
         Ship_Address = ship_Address;
     }
 
-    public Integer getShip_City() {
+    public String getShip_City() {
         return Ship_City;
     }
 
-    public void setShip_City(Integer ship_City) {
+    public void setShip_City(String ship_City) {
         Ship_City = ship_City;
     }
 
-    public Integer getShip_Region() {
+    public String getShip_Region() {
         return Ship_Region;
     }
 
-    public void setShip_Region(Integer ship_Region) {
+    public void setShip_Region(String ship_Region) {
         Ship_Region = ship_Region;
     }
 
-    public Integer getShip_Postal_Code() {
+    public String getShip_Postal_Code() {
         return Ship_Postal_Code;
     }
 
-    public void setShip_Postal_Code(Integer ship_Postal_Code) {
+    public void setShip_Postal_Code(String ship_Postal_Code) {
         Ship_Postal_Code = ship_Postal_Code;
     }
 
-    public Integer getShip_Country() {
+    public String getShip_Country() {
         return Ship_Country;
     }
 
-    public void setShip_Country(Integer ship_Country) {
+    public void setShip_Country(String ship_Country) {
         Ship_Country = ship_Country;
-    }
-
-    public customer getCustomer() {
-        return Customer;
-    }
-
-    public void setCustomer(customer customer) {
-        Customer = customer;
     }
 }
 

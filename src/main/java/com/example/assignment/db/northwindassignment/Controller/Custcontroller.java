@@ -18,30 +18,25 @@ public class Custcontroller {
     public String addCustomers(@RequestBody List<customer> Customers) {
         dao.saveAll( Customers);
         return "hi";
-
-
     }
 
     @GetMapping("/getAll")
     public List<customer> getCustomers() {
         return (List<customer>) dao.findAll();
     }
+
     @GetMapping("/getCustomer/{id}")
     public Optional<customer> getone(@PathVariable String id)
     {
         return dao.findById(id);
     }
+
     @DeleteMapping("/delete/{id}")
     public void deleteCustomer(@PathVariable String id)
     {
         dao.deleteById(id);
     }
-    @PutMapping("/update/{id}")
-    public String updateCustomers(@RequestBody customer customer,@PathVariable String id)
-    {
-        dao.save(customer);
-        return "updated";
-    }
+
 }
 
 

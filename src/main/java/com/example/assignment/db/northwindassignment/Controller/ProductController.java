@@ -26,16 +26,19 @@ public class ProductController {
         public List<Products> getProducts() {
         return (List<Products>) dao.findAll();
     }
+
     @GetMapping("/getProduct/{id}")
     public Optional<Products> getone(@PathVariable Integer id)
     {
         return dao.findById(id);
     }
+
     @DeleteMapping("/delete/{id}")
     public void deleteProduct(@PathVariable Integer id)
     {
         dao.deleteById(id);
     }
+
     @PutMapping("/update/{id}")
     public String updateCustomers(@RequestBody Products product,@PathVariable String id)
     {
