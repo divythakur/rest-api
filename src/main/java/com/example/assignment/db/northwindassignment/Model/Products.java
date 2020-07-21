@@ -1,19 +1,37 @@
 package com.example.assignment.db.northwindassignment.Model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class Products {
     @Id
+    @Column(name="productid")
     private Integer Product_ID;
+    @Column(name="productname")
+
     private String Product_Name;
+    @Column(name="supplierid")
+
     private Integer Supplier_id;
+    @Column(name="categoryid")
+
     private Integer Category_id;
+    @Column(name="quantityperunit")
+
     private String Quantity_Per_Unit;
+    @Column(name="unitprice")
+
     private Float Unit_Price;
+    @Column(name="unitsinstock")
+
     private Integer Units_In_Stock;
+    @Column(name="unitsonorder")
+
     private Integer Units_On_Order;
+    @Column(name="recordedlevel")
+
     private Integer Recorded_Level;
     private Integer Discontinued;
 
@@ -97,6 +115,7 @@ public class Products {
         Discontinued = discontinued;
     }
 }
+
 
 
 

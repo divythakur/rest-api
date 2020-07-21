@@ -1,7 +1,6 @@
 package com.example.assignment.db.northwindassignment.Controller;
 
 import com.example.assignment.db.northwindassignment.Model.Products;
-import com.example.assignment.db.northwindassignment.repository.Custrepo;
 import com.example.assignment.db.northwindassignment.repository.Productrepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +16,7 @@ public class ProductController {
     @PostMapping("/addProducts")
     public String addProducts(@RequestBody List<Products> products) {
         dao.saveAll( products);
-        return "hi";
+        return "Added or Updated if exists";
 
 
     }

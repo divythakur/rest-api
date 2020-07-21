@@ -9,14 +9,23 @@ import javax.persistence.Table;
 @Table(name="Customers")
 public class Customers {
     @Id
-    @Column(name="CustomerId")
+    @Column(name="customerid")
     private String customer_id;
+    @Column(name="companyname")
+
     private String Company_Name;
+    @Column(name="contactname")
+
     private String Contact_Name;
-    private String Contact_Title;
+
+    @Column(name="contacttitle")
+
+      private String Contact_Title;
     private String Address;
     private String City;
     private String Region;
+    @Column(name="postalcode")
+
     private String Postal_Code;
     @Column(name="Country")
     private String Country;

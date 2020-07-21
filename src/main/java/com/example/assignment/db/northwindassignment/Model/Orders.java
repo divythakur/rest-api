@@ -5,22 +5,45 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
+@Table(name="Orders")
 public class Orders {
     @Id
+    @Column(name="orderid")
     private Integer Order_ID;
+    @Column(name="customerid")
     private String Customer_Id;
+    @Column(name="employeeid")
     private Integer  Employee_ID;
+    @Column(name="orderdate")
     private String Order_Date;
+    @Column(name="requireddate")
+
     private String Required_Date;
+    @Column(name="shippeddate")
+
     private String Shipped_Date;
-    @Column(name="ShipVia")
+    @Column(name="shipvia")
     private Integer  Ship_via;
+
     private Float Freight ;
+    @Column(name="shipname")
+
+
     private String Ship_Name;
+    @Column(name="shipaddress")
+
     private String Ship_Address;
+    @Column(name="shipcity")
+
     private String Ship_City;
+    @Column(name="shipregion")
+
     private String Ship_Region;
+    @Column(name="shippostalcode")
+
     private String Ship_Postal_Code;
+    @Column(name="shipcountry")
+
     private String Ship_Country;
 
     public Integer getOrder_ID() {
@@ -135,6 +158,8 @@ public class Orders {
         Ship_Country = ship_Country;
     }
 }
+
+
 
 
 
