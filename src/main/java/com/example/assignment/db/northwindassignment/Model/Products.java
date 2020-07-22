@@ -30,9 +30,9 @@ public class Products {
     @Column(name="unitsonorder")
 
     private Integer Units_On_Order;
-    @Column(name="recordedlevel")
+    @Column(name="reorderlevel")
 
-    private Integer Recorded_Level;
+    private Integer Reorder_Level;
     private Integer Discontinued;
 
     public Integer getProduct_ID() {
@@ -100,11 +100,11 @@ public class Products {
     }
 
     public Integer getRecorded_Level() {
-        return Recorded_Level;
+        return Reorder_Level;
     }
 
     public void setRecorded_Level(Integer recorded_Level) {
-        Recorded_Level = recorded_Level;
+        Reorder_Level = recorded_Level;
     }
 
     public Integer getDiscontinued() {
