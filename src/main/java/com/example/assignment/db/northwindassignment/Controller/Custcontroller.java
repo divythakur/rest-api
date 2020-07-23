@@ -13,6 +13,12 @@ import java.util.Optional;
 public class Custcontroller {
     @Autowired
     private Custrepo dao;
+    @RequestMapping("/hi")
+    @ResponseBody
+    public String hithere() {
+
+        return "helllllo";
+    }
 
     @PostMapping("/addCustomers")
     public String addCustomers(@RequestBody List<Customers> Customers) {
