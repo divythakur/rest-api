@@ -8,7 +8,7 @@ public class homeController {
 @RequestMapping("/")
     public String homepage()
   {
-      return "Welcome  to   the   page   :-   As per  cloud   Condition   . Due to   Size  limitation  Some of the Data can be missed   so   plz ignore if there is mismatch with actual dataset  ..   THANK YOU"
+      return "Welcome  to   the   page   :-   As per  cloud   Condition   . Due to   Size  limitation  Some of the Data can be missed   so   plz ignore if there is mismatch with actual dataset  ..   THANK YOU";
 
    }
 
