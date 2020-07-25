@@ -38,10 +38,5 @@ public class ProductController {
         dao.deleteById(id);
     }
 
-    @PutMapping("/update/{id}")
-    public String updateCustomers(@RequestBody Products product,@PathVariable String id)
-    {
-        dao.save(product);
-        return "updated";
-    }
+
 }
